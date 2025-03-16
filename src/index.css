@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
+
+
+body {
+    background-color: #ddd;
+    font-family:primary;
+}
+
 @theme {
-    --primary:#ce3a00;
+    --color-primary:#55624E;
+    --font-primary:"Playfair Display", 'serif';
    
 }
