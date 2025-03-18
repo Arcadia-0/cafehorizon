@@ -1,11 +1,23 @@
-import React from 'react';
-import hero from "../../assets/hero/hero.png";
+import React, { useState, useEffect } from 'react';
+import hero from "../../assets/hero/hero2.png";
 
 const Hero = () => {
+  // State for controlling the visibility of the content
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Trigger visibility change after the component is mounted
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <div className="container text-black pt-30 px-4 md:px-8 flex flex-col md:flex-row items-center">
       {/* Sol Kısım */}
-      <div className="text-center md:text-left md:w-1/2">
+      <div
+        className={`text-center md:text-left md:w-1/2 transition-all duration-700 ease-out transform ${
+          isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+        }`}
+      >
         <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
           Taze Kahve, Sıcak Anlar
         </h1>
@@ -15,8 +27,12 @@ const Hero = () => {
       </div>
 
       {/* Sağ Kısım */}
-      <div className="mt-6 md:mt-0 md:w-1/2">
-        <img src={hero} alt="Hero Image" className="w-full h-auto"/>
+      <div
+        className={`mt-6 md:mt-0 md:w-1/2 transition-all duration-700 ease-out transform ${
+          isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+        }`}
+      >
+        <img src={hero} alt="Hero Image" className="w-full h-auto" />
       </div>
     </div>
   );

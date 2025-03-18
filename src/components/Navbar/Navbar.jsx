@@ -64,8 +64,8 @@ const Navbar = () => {
           <ul
             className={`flex flex-col p-4 md:p-0 mt-4 font-medium border border-primary rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ${
               isVisible
-                ? "opacity-100 translate-y-0 transition-all duration-700 ease-out"
-                : "opacity-0 translate-y-10" // Menü öğeleri ekranın üstünden gelerek görünür olacak
+                ? "opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+                : "opacity-0 translate-y-10" 
             }`}
           >
             <li>
