@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logodark from "../../assets/logodark.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); 
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const handleMenuToggle = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -23,12 +18,12 @@ const Navbar = () => {
         />
 
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button
-  type="button"
-  className="text-white bg-primary hover:bg-secondary font-medium  text-sm px-6 py-2 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
->
-  KEŞFET
-</button>
+          <button
+            type="button"
+            className="text-white bg-primary hover:bg-secondary font-medium text-sm px-6 py-2"
+          >
+            KEŞFET
+          </button>
           <button
             onClick={handleMenuToggle}
             type="button"
@@ -56,26 +51,18 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`${
-            isMobileMenuOpen ? "block" : "hidden"
-          } items-center justify-between w-full md:flex md:w-auto md:order-1`}
+          className={`${isMobileMenuOpen ? "block" : "hidden"} w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
-          <ul
-            className={`flex flex-col p-4 md:p-0 mt-4 font-medium border border-primary rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ${
-              isVisible
-                ? "opacity-100 translate-y-0 transition-all duration-1000 ease-out"
-                : "opacity-0 translate-y-10" 
-            }`}
-          >
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-primary rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
               <a
                 href="#"
                 className={`block py-2 px-3 ${
                   location.pathname === "/"
-                    ? "text-primary hover:bg-gray-200 md:hover:bg-transparent "
+                    ? "text-primary md:hover:bg-transparent"
                     : "text-gray-900"
-                } rounded-sm md:bg-transparent md:p-0 transition-all duration-300 ease-in-out`}
+                } rounded-sm md:bg-transparent md:p-0`}
                 aria-current="page"
               >
                 ANA SAYFA
@@ -84,7 +71,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-primary rounded-sm hover:bg-gray-200 md:hover:bg-transparent md:hover:text-secondary md:p-0 transition-all duration-300 ease-in-out"
+                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 HAKKIMIZDA
               </a>
@@ -92,7 +79,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-primary rounded-sm hover:bg-gray-200 md:hover:bg-transparent md:hover:text-secondary md:p-0 transition-all duration-300 ease-in-out"
+                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 MENÜ
               </a>
@@ -100,7 +87,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-primary rounded-sm hover:bg-gray-200 md:hover:bg-transparent md:hover:text-secondary md:p-0 transition-all duration-300 ease-in-out"
+                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 İLETİŞİM
               </a>
