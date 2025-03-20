@@ -1,6 +1,8 @@
 import './App.css'
 import Category from './components/Category/Category'
+import Gallery from './components/Gallery/Gallery'
 import Hero from './components/Hero/Hero'
+import Menu from './components/Menu/Menu'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       <Navbar/>
       <Hero/>
       <Category/>
+      <Menu/>
+      <Gallery/>
     </div>
   )
 }
