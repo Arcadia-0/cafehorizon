@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
-
+body,html {
+    overflow-x: hidden;
+}
 body {
     background-color: #ddd;
     font-family:primary;
     width: 100%;
-    overflow-x: hidden;
+    
 
 }
 

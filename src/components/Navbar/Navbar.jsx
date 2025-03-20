@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import logodark from "../../assets/logodark.png";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); 
+  // State for controlling the mobile menu visibility
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Handle the mobile menu toggle
+  const handleMenuToggle = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsMobileMenuOpen(false); // Start with mobile menu closed
   }, []);
-
-  // Mobil menü toggle fonksiyonu
-  const handleMenuToggle = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
 
   return (
     <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-primary shadow-md">
@@ -26,14 +26,14 @@ const Navbar = () => {
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
-            className="text-white bg-primary hover:bg-secondary font-medium text-sm px-6 py-2 transition-transform duration-300 transform hover:scale-105"
+            className="text-white bg-primary hover:bg-secondary font-medium text-sm px-6 py-2"
           >
             KEŞFET
           </button>
           <button
             onClick={handleMenuToggle}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary rounded-lg md:hidden transition-transform duration-300 transform hover:scale-110"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary rounded-lg md:hidden"
             aria-controls="navbar-sticky"
             aria-expanded={isMobileMenuOpen ? "true" : "false"}
           >
@@ -59,18 +59,18 @@ const Navbar = () => {
         <div
           className={`${
             isMobileMenuOpen ? "block" : "hidden"
-          } w-full md:flex md:w-auto md:order-1 transition-transform duration-500 transform md:translate-x-0 translate-x-full`}
+          } w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-primary rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
               <a
                 href="#"
-                className={`block py-2 px-3 transition-all duration-300 transform ${
+                className={`block py-2 px-3 ${
                   location.pathname === "/"
                     ? "text-primary md:hover:bg-transparent"
                     : "text-gray-900"
-                } rounded-sm md:bg-transparent md:p-0 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                } rounded-sm md:bg-transparent md:p-0`}
                 aria-current="page"
               >
                 ANA SAYFA
@@ -79,7 +79,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className={`block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0 transition-all duration-300 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 HAKKIMIZDA
               </a>
@@ -87,7 +87,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className={`block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0 transition-all duration-300 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 MENÜ
               </a>
@@ -95,7 +95,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className={`block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0 transition-all duration-300 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 İLETİŞİM
               </a>
