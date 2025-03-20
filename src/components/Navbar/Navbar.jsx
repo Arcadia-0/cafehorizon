@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logodark from "../../assets/logodark.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); 
 
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  // Mobil menü toggle fonksiyonu
   const handleMenuToggle = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -20,14 +26,14 @@ const Navbar = () => {
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
-            className="text-white bg-primary hover:bg-secondary font-medium text-sm px-6 py-2"
+            className="text-white bg-primary hover:bg-secondary font-medium text-sm px-6 py-2 transition-transform duration-300 transform hover:scale-105"
           >
             KEŞFET
           </button>
           <button
             onClick={handleMenuToggle}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary rounded-lg md:hidden"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary rounded-lg md:hidden transition-transform duration-300 transform hover:scale-110"
             aria-controls="navbar-sticky"
             aria-expanded={isMobileMenuOpen ? "true" : "false"}
           >
@@ -51,18 +57,20 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`${isMobileMenuOpen ? "block" : "hidden"} w-full md:flex md:w-auto md:order-1`}
+          className={`${
+            isMobileMenuOpen ? "block" : "hidden"
+          } w-full md:flex md:w-auto md:order-1 transition-transform duration-500 transform md:translate-x-0 translate-x-full`}
           id="navbar-sticky"
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-primary rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
               <a
                 href="#"
-                className={`block py-2 px-3 ${
+                className={`block py-2 px-3 transition-all duration-300 transform ${
                   location.pathname === "/"
                     ? "text-primary md:hover:bg-transparent"
                     : "text-gray-900"
-                } rounded-sm md:bg-transparent md:p-0`}
+                } rounded-sm md:bg-transparent md:p-0 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 aria-current="page"
               >
                 ANA SAYFA
@@ -71,7 +79,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
+                className={`block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0 transition-all duration-300 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
               >
                 HAKKIMIZDA
               </a>
@@ -79,7 +87,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
+                className={`block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0 transition-all duration-300 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
               >
                 MENÜ
               </a>
@@ -87,7 +95,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
+                className={`block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0 transition-all duration-300 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
               >
                 İLETİŞİM
               </a>

@@ -4,6 +4,9 @@
 body {
     background-color: #ddd;
     font-family:primary;
+    width: 100%;
+    overflow-x: hidden;
+
 }
 
 @theme {
@@ -14,11 +17,11 @@ body {
 
 /* styles.css */
 .container {
-    width: 100%;                      /* Tam genişlik */
-    max-width: 1200px;                /* Maksimum genişlik, ihtiyacınıza göre değiştirebilirsiniz */
-    margin-left: auto;                /* Yatayda merkezleme */
-    margin-right: auto;               /* Yatayda merkezleme */
-    padding-left: 1rem;               /* Sol iç boşluk */
-    padding-right: 1rem;              /* Sağ iç boşluk */
+    width: 100%;                     
+    max-width: 1200px;               
+    margin-left: auto;               
+    margin-right: auto;               
+    padding-left: 1rem;              
+    padding-right: 1rem;             
   }
   
