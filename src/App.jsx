@@ -1,5 +1,6 @@
 import './App.css'
 import Category from './components/Category/Category'
+import Contact from './components/Contact/Contact'
 import Gallery from './components/Gallery/Gallery'
 import Hero from './components/Hero/Hero'
 import Menu from './components/Menu/Menu'
@@ -14,6 +15,7 @@ function App() {
       <Category/>
       <Menu/>
       <Gallery/>
+      <Contact/>
     </div>
   )
 }
