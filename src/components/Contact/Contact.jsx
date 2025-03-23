@@ -42,7 +42,7 @@ const Contact = () => {
             className="p-3 border bg-primary text-white border-gray-300 rounded-md flex-grow focus:outline-none focus:ring-2 focus:ring-secondary"
             rows="4"
           />
-          <button className="cursor-pointer bg-primary text-white p-3 rounded-md hover:bg-primary-dark">
+          <button className="cursor-pointer bg-primary text-white p-3 rounded-md hover:bg-secondary transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
             GÖNDER
           </button>
         </div>
