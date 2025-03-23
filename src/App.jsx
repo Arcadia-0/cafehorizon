@@ -1,6 +1,7 @@
 import './App.css'
 import Category from './components/Category/Category'
 import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
 import Gallery from './components/Gallery/Gallery'
 import Hero from './components/Hero/Hero'
 import Menu from './components/Menu/Menu'
@@ -16,6 +17,7 @@ function App() {
       <Menu/>
       <Gallery/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }
