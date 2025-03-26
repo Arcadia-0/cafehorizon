@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="text-sm text-white space-y-4">
             <div className="flex items-center space-x-3">
               <FaMapMarkerAlt className="text-secondary" size={20} />
-              <span className='text-white'>123 Sahil Yolu, Plaj Mahallesi, İstanbul</span>
+              <span className='text-white'>Çeşme,İzmir</span>
             </div>
             <div className="flex items-center space-x-3">
               <FaPhoneAlt className="text-secondary" size={20} />

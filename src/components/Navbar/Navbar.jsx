@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logodark from "../../assets/logodark.png";
+import { Link } from "react-router-dom"; // Link import edilmiş
 
 const Navbar = () => {
   // State for controlling the mobile menu visibility
@@ -64,41 +65,37 @@ const Navbar = () => {
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-primary rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
-              <a
-                href="#"
-                className={`block py-2 px-3 ${
-                  location.pathname === "/"
-                    ? "text-primary md:hover:bg-transparent"
-                    : "text-gray-900"
-                } rounded-sm md:bg-transparent md:p-0`}
+              <Link
+                to="/"
+                className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
                 aria-current="page"
               >
                 ANA SAYFA
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 HAKKIMIZDA
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/detailmenu"  
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 MENÜ
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 İLETİŞİM
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
