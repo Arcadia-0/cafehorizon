@@ -9,6 +9,7 @@ import Hero from './components/Hero/Hero';
 import Menu from './components/Menu/Menu';
 import Navbar from './components/Navbar/Navbar';
 import DetailMenu from './components/SideComponents/DetailMenu/DetailMenu';
+import About from './components/SideComponents/About/About';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
         {/* /detailmenu sayfası için DetailMenu bileşeni gösterilir */}
         <Route path='/detailmenu' element={<DetailMenu />} />
+        <Route path='/about' element={<About />} />
       </Routes>
 
       {/* Footer her sayfada görünür */}
