@@ -1,28 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import logolight from "../../assets/logolight.png";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const Footer = () => {
-  
-  // AOS'u initialize et
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,  // Animasyon süresi (ms cinsinden)
-      easing: 'ease-in-out',  // Animasyon hızlanma
-      once: true,  // Animasyon sadece bir kez çalışsın
-    });
-  }, []);
-
   return (
-    <footer className=" bg-primary text-white py-16 px-8">
+    <footer className="bg-primary text-white py-16 px-8">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         
         {/* Sol Taraf: Logo */}
-        <div 
-          data-aos="fade-up"
-          className="flex flex-col items-center sm:items-start text-center sm:text-left">
+        <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <img 
             src={logolight} 
             alt="Logo" 
@@ -33,10 +19,7 @@ const Footer = () => {
         </div>
 
         {/* Orta Taraf: Hızlı Bağlantılar */}
-        <div 
-          data-aos="fade-up"
-          data-aos-delay="200"
-          className="flex flex-col items-center sm:items-start space-y-6">
+        <div className="flex flex-col items-center sm:items-start space-y-6">
           <p className="text-lg font-semibold text-secondary uppercase tracking-wider">Hızlı Bağlantılar</p>
           <div className="text-sm text-white space-y-2">
             <a href="#home" className="hover:text-secondary transition-colors">Ana Sayfa</a>
@@ -47,10 +30,7 @@ const Footer = () => {
         </div>
 
         {/* Sağ Taraf: İletişim Bilgileri ve Sosyal Medya */}
-        <div 
-          data-aos="fade-up"
-          data-aos-delay="400"
-          className="flex flex-col items-center sm:items-start space-y-6">
+        <div className="flex flex-col items-center sm:items-start space-y-6">
           <p className="text-lg font-semibold text-secondary uppercase tracking-wider">İletişim</p>
           <div className="text-sm text-white space-y-4">
             <div className="flex items-center space-x-3">
@@ -106,10 +86,7 @@ const Footer = () => {
       </div>
 
       {/* Alt Kısım: Copyright */}
-      <div 
-        data-aos="fade-up"
-        data-aos-delay="600"
-        className="text-center mt-8 text-sm text-secondary opacity-70">
+      <div className="text-center mt-8 text-sm text-secondary opacity-70">
         <p>© 2025 Seashell's Cafe. Tüm Hakları Saklıdır.</p>
       </div>
     </footer>

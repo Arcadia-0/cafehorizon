@@ -8,9 +8,9 @@ const Hero = () => {
   // AOS'u initialize et
   useEffect(() => {
     AOS.init({
-      duration: 1000,  // Animasyon süresi (ms cinsinden)
+      duration: 1300,  // Animasyon süresi (ms cinsinden)
       easing: 'ease-in-out',  // Animasyon hızlanma
-      once: true,  // Bir kez çalışsın, tekrar etmesin
+      once: false,  // Bir kez çalışsın, tekrar etmesin
     });
   }, []);
 

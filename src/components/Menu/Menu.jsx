@@ -7,9 +7,9 @@ const Menu = () => {
   // AOS'u initialize et
   useEffect(() => {
     AOS.init({
-      duration: 1000,  // Animasyon süresi (ms cinsinden)
+      duration: 1300,  // Animasyon süresi (ms cinsinden)
       easing: 'ease-in-out',  // Animasyon hızlanma
-      once: true,  // Animasyon sadece bir kez çalışsın
+      once: false,  // Animasyon sadece bir kez çalışsın
     });
   }, []);
 

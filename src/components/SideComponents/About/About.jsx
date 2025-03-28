@@ -11,7 +11,7 @@ const About = () => {
     AOS.init({
       duration: 1000,  // Animasyon süresi (ms cinsinden)
       easing: 'ease-in-out',  // Animasyon hızlanma
-      once: true,  // Bir kez çalışsın, tekrar etmesin
+      once: false,  // Bir kez çalışsın, tekrar etmesin
     });
   }, []);
 

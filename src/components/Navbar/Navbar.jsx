@@ -11,6 +11,14 @@ const Navbar = () => {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
+  // Scroll to top when the home button or logo is clicked
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll
+    });
+  };
+
   useEffect(() => {
     setIsMobileMenuOpen(false); // Start with mobile menu closed
   }, []);
@@ -18,10 +26,12 @@ const Navbar = () => {
   return (
     <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-primary shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        {/* Logo with scroll-to-top functionality */}
         <img
           src={logodark}
-          className="w-15 h-auto"
+          className="w-15 h-auto cursor-pointer"
           alt="Flowbite Logo"
+          onClick={scrollToTop} // Scroll to top when the logo is clicked
         />
 
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -67,6 +77,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
+                onClick={scrollToTop} // Scroll to top when "ANA SAYFA" is clicked
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
                 aria-current="page"
               >
@@ -83,7 +94,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/detailmenu"  
+                to="/detailmenu"
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 MENÜ

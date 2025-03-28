@@ -9,13 +9,13 @@ import pancake from "../../assets/category/pancake.png";
 import croissant from "../../assets/category/croissant.png";
 
 const Category = () => {
-
   // AOS'u initialize et
   useEffect(() => {
     AOS.init({
-      duration: 1000,  // Animasyon süresi (ms cinsinden)
+      duration: 1300,  // Animasyon süresi (ms cinsinden)
       easing: 'ease-in-out',  // Animasyon hızlanma
-      once: true,  // Bir kez çalışsın, tekrar etmesin
+      once: false,  // Animasyon her kaydırma ile tekrar çalışsın
+      offset: 200,  // Öğelerin ne kadar kaydırıldığında animasyon başlasın
     });
   }, []);
 
