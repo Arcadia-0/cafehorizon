@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import cup from "../../assets/category/cup.png";
 import turkishcoffee from "../../assets/category/turkishcoffee.png";
 import espresso from "../../assets/category/espresso.png";
@@ -6,28 +9,29 @@ import pancake from "../../assets/category/pancake.png";
 import croissant from "../../assets/category/croissant.png";
 
 const Category = () => {
- 
-  const [isVisible, setIsVisible] = useState(false);
 
-  
+  // AOS'u initialize et
   useEffect(() => {
-    setIsVisible(true);
+    AOS.init({
+      duration: 1000,  // Animasyon süresi (ms cinsinden)
+      easing: 'ease-in-out',  // Animasyon hızlanma
+      once: true,  // Bir kez çalışsın, tekrar etmesin
+    });
   }, []);
 
   return (
     <div className="pt-12 flex flex-col justify-center items-center">
       <p
-        className={`text-secondary text-xl transition-all duration-700 ease-out transform ${
-          isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-        }`}
+        data-aos="fade-up"
+        className="text-secondary text-xl transition-all duration-700 ease-out"
       >
         Hangi Lezzetler Var?
       </p>
       
       <h1
-        className={`text-primary text-2xl font-bold text-center transition-all duration-700 ease-out transform ${
-          isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-        }`}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        className="text-primary text-2xl font-bold text-center transition-all duration-700 ease-out"
       >
         KAHVENİN MÜKEMMELLİKLE BULUŞTUĞU YER.
       </h1>
@@ -36,13 +40,12 @@ const Category = () => {
 
       {/* Flex container for images and text */}
       <div className="mt-8 flex flex-col md:flex-row justify-between items-center w-full max-w-[1200px]">
-
+        
         {/* Left-side images with heading and paragraph */}
         <div className="flex flex-col items-center justify-start mb-8 md:mb-0">
           <div
-            className={`flex items-center mb-8 transition-all duration-700 ease-out transform ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-            }`}
+            data-aos="fade-right"
+            className="flex items-center mb-8"
           >
             <img src={turkishcoffee} alt="turkishcoffee" className="w-[120px] h-auto mr-4" />
             <div className="flex flex-col">
@@ -54,9 +57,9 @@ const Category = () => {
           </div>
 
           <div
-            className={`flex items-center transition-all duration-700 ease-out transform ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-            }`}
+            data-aos="fade-right"
+            data-aos-delay="100"
+            className="flex items-center"
           >
             <img src={espresso} alt="espresso" className="w-[120px] h-auto mr-4" />
             <div className="flex flex-col">
@@ -70,9 +73,8 @@ const Category = () => {
 
         {/* Center large image (cup) with heading and paragraph */}
         <div
-          className={`flex flex-col items-center justify-center mb-8 md:mb-0 transition-all duration-700 ease-out transform ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-          }`}
+          data-aos="zoom-in"
+          className="flex flex-col items-center justify-center mb-8 md:mb-0"
         >
           <img src={cup} alt="cup" className="w-[500px] h-auto" />
         </div>
@@ -80,9 +82,8 @@ const Category = () => {
         {/* Right-side images with heading and paragraph */}
         <div className="flex flex-col items-center justify-start">
           <div
-            className={`flex items-center mb-8 transition-all duration-700 ease-out transform ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-            }`}
+            data-aos="fade-left"
+            className="flex items-center mb-8"
           >
             <img src={pancake} alt="pancake" className="w-[120px] h-auto mr-4" />
             <div className="flex flex-col">
@@ -94,9 +95,9 @@ const Category = () => {
           </div>
 
           <div
-            className={`flex items-center transition-all duration-700 ease-out transform ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-            }`}
+            data-aos="fade-left"
+            data-aos-delay="100"
+            className="flex items-center"
           >
             <img src={croissant} alt="croissant" className="w-[120px] h-auto mr-4" />
             <div className="flex flex-col">
