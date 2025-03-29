@@ -1,8 +1,14 @@
 import React from "react";
-import st1 from "../../../assets/detailmenü/1.png";
-import st2 from "../../../assets/detailmenü/2.png";
-import st3 from "../../../assets/detailmenü/3.png";  // Örnek bir espresso görseli
-import st4 from "../../../assets/detailmenü/4.png";    // Örnek bir pankek görseli
+import product_1 from "../../../assets/detailmenü/product_1.png"
+import product_2 from "../../../assets/detailmenü/product_2.png"
+import product_3 from "../../../assets/detailmenü/product_3.png"
+import product_4 from "../../../assets/detailmenü/product_4.png"
+import product_5 from "../../../assets/detailmenü/product_5.png"
+import product_6 from "../../../assets/detailmenü/product_6.png"
+import product_7 from "../../../assets/detailmenü/product_7.png"
+import product_8 from "../../../assets/detailmenü/product_8.png"
+
+
 
 
 // Kategoriler ve ürünler
@@ -15,57 +21,63 @@ const categories = [
         id: 1,
         name: "Türk Kahvesi",
         description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: st1,
+        image: product_1,
+        price: "15₺",
+      },
+      {
+        id: 2,
+        name: "Türk Kahvesi",
+        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
+        image: product_2,
+        price: "15₺",
+      },
+      {
+        id: 3,
+        name: "Türk Kahvesi",
+        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
+        image: product_3,
         price: "15₺",
       },
       {
         id: 4,
-        name: "Dibek Kahvesi",
+        name: "Türk Kahvesi",
         description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: st2,
+        image: product_4,
+        price: "15₺",
+      },
+      {
+        id: 5,
+        name: "Türk Kahvesi",
+        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
+        image: product_5,
+        price: "15₺",
+      },
+      {
+        id: 6,
+        name: "Türk Kahvesi",
+        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
+        image: product_6,
+        price: "15₺",
+      },
+      {
+        id: 7,
+        name: "Türk Kahvesi",
+        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
+        image: product_7,
+        price: "15₺",
+      },
+      {
+        id: 8,
+        name: "Türk Kahvesi",
+        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
+        image: product_8,
         price: "15₺",
       },
     ],
   },
-  {
-    id: 2,
-    name: "Espresso Bazlı Kahveler",
-    products: [
-      {
-        id: 2,
-        name: "Espresso",
-        description: "Yoğun aromalı, sade espresso.",
-        image: st3,
-        price: "18₺",
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Pankekler",
-    products: [
-      {
-        id: 3,
-        name: "Pankek",
-        description: "Lezzetli, yumuşak pankekler.",
-        image: st4,
-        price: "20₺",
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "Kruvasanlar",
-    products: [
-      {
-        id: 5,
-        name: "Kruvasan",
-        description: "Taze pişirilmiş, yumuşak kruvasan.",
-        image: st4,
-        price: "12₺",
-      },
-    ],
-  },
+  
+  
+  
 ];
 
 const DetailMenu = () => {

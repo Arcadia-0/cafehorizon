@@ -55,6 +55,7 @@ const Menu = () => {
             </li>
             <li data-aos="fade-up" data-aos-delay="300" className="flex justify-between items-start border-b border-white pb-2">
               <div>
+                
                 <span>EKSPRES TÜRK KAHVESİ</span>
                 <p className="text-sm">Hızlı Türk kahvesi, modern dokunuş.</p>
               </div>
