@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
-            className="cursor-pointer text-white bg-primary hover:bg-secondary font-medium text-sm px-6 py-2 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+            className="cursor-pointer text-white bg-primary hover:bg-secondary font-medium text-sm px-6 py-2 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg rounded-md"
           >
             KEŞFET
           </button>

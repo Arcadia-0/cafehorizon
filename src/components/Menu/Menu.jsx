@@ -27,7 +27,7 @@ const Menu = () => {
         {/* Sol Kolon (Türk Kahveleri) */}
         <div className="text-white">
           <h2 
-            data-aos="fade-right" 
+            data-aos="fade-up" 
             className="text-secondary text-xl font-semibold mb-4">
             TÜRK KAHVELERİ
           </h2>
@@ -66,7 +66,7 @@ const Menu = () => {
         {/* Sağ Kolon (Espresso Bazlı Kahveler) */}
         <div className="text-white">
           <h2 
-            data-aos="fade-left" 
+            data-aos="fade-up" 
             className="text-secondary text-xl font-semibold mb-4">
             ESPRESSO BAZLI KAHVELER
           </h2>
