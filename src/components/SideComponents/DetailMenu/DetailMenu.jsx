@@ -135,6 +135,9 @@ const categories = [
 ];
 
 const DetailMenu = () => {
+  
+  window.scrollTo(0,0);
+  
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-8">
       <h1 className="text-4xl font-extrabold text-center mb-12 text-gray-800">Menü</h1>
