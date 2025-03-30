@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logodark from "../../assets/logodark.png";
-import { Link } from "react-router-dom"; // Link import edilmiş
+import { Link } from "react-router-dom"; 
 
 const Navbar = () => {
   // State for controlling the mobile menu visibility
@@ -15,8 +15,13 @@ const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scroll
+      behavior: "smooth", 
     });
+  };
+
+  // Close the mobile menu when a menu item is clicked
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false); // Close the mobile menu
   };
 
   useEffect(() => {
@@ -48,7 +53,7 @@ const Navbar = () => {
             aria-controls="navbar-sticky"
             aria-expanded={isMobileMenuOpen ? "true" : "false"}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only"></span>
             <svg
               className="w-5 h-5"
               aria-hidden="true"
@@ -77,7 +82,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                onClick={scrollToTop} // Scroll to top when "ANA SAYFA" is clicked
+                onClick={() => { scrollToTop(); handleLinkClick(); }}
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
                 aria-current="page"
               >
@@ -87,6 +92,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/about"
+                onClick={handleLinkClick}
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 HAKKIMIZDA
@@ -95,6 +101,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/detailmenu"
+                onClick={handleLinkClick}
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 MENÜ
@@ -103,6 +110,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
+                onClick={handleLinkClick}
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 İLETİŞİM

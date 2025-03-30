@@ -1,116 +1,163 @@
 import React from "react";
-import product_1 from "../../../assets/detailmenü/product_1.png"
-import product_2 from "../../../assets/detailmenü/product_2.png"
-import product_3 from "../../../assets/detailmenü/product_3.png"
-import product_4 from "../../../assets/detailmenü/product_4.png"
-import product_5 from "../../../assets/detailmenü/product_5.png"
-import product_6 from "../../../assets/detailmenü/product_6.png"
-import product_7 from "../../../assets/detailmenü/product_7.png"
-import product_8 from "../../../assets/detailmenü/product_8.png"
-
-
-
+import coffee_1 from "../../../assets/detailmenü/coffee_1.png";
+import coffee_2 from "../../../assets/detailmenü/coffee_2.png";
+import coffee_3 from "../../../assets/detailmenü/coffee_3.png";
+import coffee_4 from "../../../assets/detailmenü/coffee_4.png";
+import coffee_5 from "../../../assets/detailmenü/coffee_5.png";
+import coffee_6 from "../../../assets/detailmenü/coffee_6.png";
+import coffee_7 from "../../../assets/detailmenü/coffee_7.png";
+import coffee_8 from "../../../assets/detailmenü/coffee_8.png";
+import croissant_1 from "../../../assets/detailmenü/croissant_1.png";
+import croissant_2 from "../../../assets/detailmenü/croissant_2.png";
+import croissant_3 from "../../../assets/detailmenü/croissant_3.png";
+import pancake_1 from "../../../assets/detailmenü/pancake_1.png";
+import pancake_2 from "../../../assets/detailmenü/pancake_2.png";
+import pancake_3 from "../../../assets/detailmenü/pancake_3.png";
 
 // Kategoriler ve ürünler
 const categories = [
   {
     id: 1,
-    name: "Türk Kahveleri",
+    name: "Kahveler",
     products: [
       {
         id: 1,
         name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_1,
-        price: "15₺",
+        description: "Yoğun kıvamı ve aromatik tadıyla geleneksel Türk kahvesi.",
+        image: coffee_1,
+        price: "90₺",
       },
       {
         id: 2,
-        name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_2,
-        price: "15₺",
+        name: "Dibek Kahvesi",
+        description: "Köy usulü dibek taşında dövülerek yapılan, yoğun ve lezzetli bir kahve.",
+        image: coffee_2,
+        price: "95₺",
       },
       {
         id: 3,
-        name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_3,
-        price: "15₺",
+        name: "Americano",
+        description: "Espresso üzerine sıcak su eklenerek hazırlanan hafif ve aromatik bir kahve.",
+        image: coffee_3,
+        price: "90₺",
       },
       {
         id: 4,
-        name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_4,
-        price: "15₺",
+        name: "Ice Mocha",
+        description: "Buzlu, çikolata ve kahvenin muazzam birleşimi ile ferahlatıcı bir tat.",
+        image: coffee_4,
+        price: "190₺",
       },
       {
         id: 5,
-        name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_5,
-        price: "15₺",
+        name: "Latte",
+        description: "Sütle harmanlanmış yumuşak ve kremamsı bir espresso içeceği.",
+        image: coffee_5,
+        price: "150₺",
       },
       {
         id: 6,
-        name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_6,
-        price: "15₺",
+        name: "White Mocha",
+        description: "Beyaz çikolata ve espresso karışımı, hafif tatlı bir içecek.",
+        image: coffee_6,
+        price: "190₺",
       },
       {
         id: 7,
-        name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_7,
-        price: "15₺",
+        name: "Cappuccino",
+        description: "Kremamsı süt köpüğü ve espresso karışımından yapılan klasik bir içecek.",
+        image: coffee_7,
+        price: "150₺",
       },
       {
         id: 8,
-        name: "Türk Kahvesi",
-        description: "Klasik Türk kahvesi, yoğun ve aromatik bir tat.",
-        image: product_8,
-        price: "15₺",
+        name: "Espresso",
+        description: "Yoğun ve derin aromalı, küçük ama güçlü bir kahve.",
+        image: coffee_8,
+        price: "140₺",
       },
     ],
   },
-  
-  
-  
+  {
+    id: 2,
+    name: "Kruvasanlar",
+    products: [
+      {
+        id: 1,
+        name: "Çikolatalı Kruvasan",
+        description: "İçinde eritilmiş çikolata bulunan, gevrek dış yüzeyi ile mükemmel bir tat.",
+        image: croissant_1,
+        price: "320₺",
+      },
+      {
+        id: 2,
+        name: "Peynirli Kruvasan",
+        description: "Zengin peynir dolgusu ile sarılmış çıtır çıtır bir kruvasan.",
+        image: croissant_3,
+        price: "310₺",
+      },
+      {
+        id: 3,
+        name: "Klasik Kruvasan",
+        description: "Tereyağlı ve çıtır çıtır hamuruyla geleneksel Fransız kruvasanı.",
+        image: croissant_2,
+        price: "290₺",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Pancakeler",
+    products: [
+      {
+        id: 1,
+        name: "Meyveli Pancake",
+        description: "Taze meyveler ve bal ile sunulmuş yumuşacık pancake.",
+        image: pancake_1,
+        price: "250₺",
+      },
+      {
+        id: 2,
+        name: "Çikolatalı Pancake",
+        description: "Eritilmiş çikolata ve kremayla tatlandırılmış, yoğun lezzetli bir pancake.",
+        image: pancake_2,
+        price: "240₺",
+      },
+      {
+        id: 3,
+        name: "Klasik Pancake",
+        description: "Sade ve nefis bir pancake, üzeri taze meyve ve şurup ile servis edilir.",
+        image: pancake_3,
+        price: "220₺",
+      },
+    ],
+  },
 ];
 
 const DetailMenu = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-screen-xl mx-auto px-4 py-8">
       <h1 className="text-4xl font-extrabold text-center mb-12 text-gray-800">Menü</h1>
 
       {/* Kategorileri Listele */}
       {categories.map((category) => (
         <div key={category.id} className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">{category.name}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {category.products.map((product) => (
               <div
                 key={product.id}
-                className="cursor-pointer group relative rounded-lg overflow-hidden shadow-lg bg-gray-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl"
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 group-hover:opacity-70 transition-all duration-300"
+                  className="w-full h-56 object-cover transition-all duration-300 ease-in-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h2 className="text-xl font-semibold text-white group-hover:text-yellow-400 transform transition-all duration-300">
-                    {product.name}
-                  </h2>
-                  <p className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {product.description}
-                  </p>
-                  <p className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl mt-2 font-bold">
-                    {product.price}
-                  </p>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800">{product.name}</h3>
+                  <p className="text-gray-600 mt-2 text-sm">{product.description}</p>
+                  <p className="text-primary font-bold text-lg mt-4">{product.price}</p>
                 </div>
               </div>
             ))}
