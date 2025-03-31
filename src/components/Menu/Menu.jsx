@@ -3,106 +3,86 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Menu = () => {
-
-  // AOS'u initialize et
   useEffect(() => {
     AOS.init({
-      duration: 1300,  // Animasyon süresi (ms cinsinden)
-      easing: 'ease-in-out',  // Animasyon hızlanma
-      once: false,  // Animasyon sadece bir kez çalışsın
+      duration: 1300,
+      easing: 'ease-in-out',
+      once: false,
     });
   }, []);
 
   return (
     <div className='bg-primary py-10'>
-      {/* Başlık */}
-      <h1 
-        data-aos="fade-up" 
-        className='text-white text-2xl text-center font-bold mb-10'>
+      <h1 data-aos="fade-up" className='text-white text-2xl text-center font-bold mb-10'>
         MENÜMÜZÜ KEŞFET
       </h1>
 
-      {/* Menü Liste */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Sol Kolon (Türk Kahveleri) */}
-        <div className="text-white">
-          <h2 
-            data-aos="fade-up" 
-            className="text-secondary text-xl font-semibold mb-4">
-            TÜRK KAHVELERİ
+        {/* Sol Kolon (İçecekler) */}
+        <div className="text-white flex flex-col justify-between h-full">
+          <h2 data-aos="fade-up" className="text-secondary text-xl font-semibold mb-4">
+            İÇECEKLER
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-4 flex-grow">
             <li data-aos="fade-up" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                <span>TÜRK KAHVESİ</span>
-                <p className="text-sm">Klasik Türk kahvesi, yoğun lezzet.</p>
+                <span>SICAK İÇECEKLER</span>
+                <p className="text-sm">Kahve severler için özenle hazırlanmış, zengin aromalı sıcak içecekler. Güne başlarken vazgeçilmez.</p>
               </div>
-              <span>2.99$</span>
             </li>
             <li data-aos="fade-up" data-aos-delay="100" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                <span>DİBEK KAHVESİ</span>
-                <p className="text-sm">Ağır, geleneksel kahve.</p>
+                <span>SOĞUK İÇECEKLER</span>
+                <p className="text-sm">Serinletici ve ferahlatıcı soğuk kahve çeşitleri. Kahve ile buzun mükemmel uyumunu keşfedin, yazın tadı.</p>
               </div>
-              <span>1.99$</span>
             </li>
             <li data-aos="fade-up" data-aos-delay="200" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                <span>MENENGİÇ KAHVESİ</span>
-                <p className="text-sm">Kavak ve menengiç ağaçlarından yapılır.</p>
+                <span>KOKTEYLLER</span>
+                <p className="text-sm">Taze meyveler, nane ve diğer doğal malzemelerle hazırlanan kokteyller. Alkolsüz fakat doyurucu ve lezzetli.</p>
               </div>
-              <span>3.49$</span>
             </li>
             <li data-aos="fade-up" data-aos-delay="300" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                
-                <span>EKSPRES TÜRK KAHVESİ</span>
-                <p className="text-sm">Hızlı Türk kahvesi, modern dokunuş.</p>
+                <span>BİTKİ ÇAYLARI</span>
+                <p className="text-sm">Doğal bitkilerden yapılan, sağlıklı ve sakinleştirici içecekler. Gündüz veya gece rahatlıkla tüketebilirsiniz.</p>
               </div>
-              <span>2.49$</span>
             </li>
           </ul>
         </div>
 
-        {/* Sağ Kolon (Espresso Bazlı Kahveler) */}
-        <div className="text-white">
-          <h2 
-            data-aos="fade-up" 
-            className="text-secondary text-xl font-semibold mb-4">
-            ESPRESSO BAZLI KAHVELER
+        {/* Sağ Kolon (Yiyecekler) */}
+        <div className="text-white flex flex-col justify-between h-full">
+          <h2 data-aos="fade-up" className="text-secondary text-xl font-semibold mb-4">
+            YİYECEKLER
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-4 flex-grow">
             <li data-aos="fade-up" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                <span>LATTE</span>
-                <p className="text-sm">İyi bir kahve çeşidi, sütle harmanlanmış.</p>
+                <span>KRUVASANLAR</span>
+                <p className="text-sm">Taze tereyağıyla yapılmış, altın rengi çıtırlığıyla eşsiz bir deneyim sunan kruvasanlar. Kahvaltı için ideal.</p>
               </div>
-              <span>3.99$</span>
             </li>
             <li data-aos="fade-up" data-aos-delay="100" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                <span>CAPPUCINO</span>
-                <p className="text-sm">Köpüklü sütle zenginleştirilmiş espresso.</p>
+                <span>PANKEKLER</span>
+                <p className="text-sm">Yumuşacık, ince ve hafif pancake'ler. Üzerine taze meyve, çikolata veya bal eklenebilir. Tatlı bir kaçamak.</p>
               </div>
-              <span>3.79$</span>
             </li>
             <li data-aos="fade-up" data-aos-delay="200" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                <span>ESPRESSO</span>
-                <p className="text-sm">Daha yoğun sütlü bir espresso içeceği.</p>
+                <span>BOWLLAR</span>
+                <p className="text-sm">Sağlıklı ve doyurucu bir seçenek. Farklı meyve, granola ve yoğurt karışımlarıyla zenginleştirilmiş bowl'lar. Enerji verici.</p>
               </div>
-              <span>4.19$</span>
             </li>
             <li data-aos="fade-up" data-aos-delay="300" className="flex justify-between items-start border-b border-white pb-2">
               <div>
-                <span>AMERICANO</span>
-                <p className="text-sm">Espresso üzerine sıcak su eklenmiş.</p>
+                <span>SANDVİÇLER</span>
+                <p className="text-sm">Taze ekmek arasında, lezzetli iç malzemelerle hazırlanmış sandviçler. Kahvaltı veya atıştırmalık olarak mükemmel bir seçenek.</p>
               </div>
-              <span>2.69$</span>
             </li>
           </ul>
         </div>
-        
       </div>
     </div>
   );

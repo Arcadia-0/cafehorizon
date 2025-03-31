@@ -4,7 +4,7 @@ import logolight from "../../assets/logolight.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-16">
+    <footer id='footer' className="bg-primary text-white py-16">
       <div className="container mx-auto px-8">
 
         {/* Footer Top Section */}

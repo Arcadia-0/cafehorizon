@@ -108,13 +108,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link
-                to="/contact"
-                onClick={handleLinkClick}
+              <a
+                href="#footer"  
+                onClick={handleLinkClick}  
                 className="block py-2 px-3 text-primary rounded-sm md:hover:bg-transparent md:p-0"
               >
                 İLETİŞİM
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
