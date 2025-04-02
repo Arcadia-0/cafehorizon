@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import coffee_1 from "../../../assets/detailmenü/coffee_1.png";
 import coffee_2 from "../../../assets/detailmenü/coffee_2.png";
 import coffee_3 from "../../../assets/detailmenü/coffee_3.png";
@@ -217,8 +219,16 @@ const categories = [
 ];
 
 const DetailMenu = () => {
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,  // Animation duration
+      once: true,      // Trigger animation only once
+    });
 
-  window.scrollTo(0,0);
+    // Scroll to top on component mount
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-8">
@@ -227,12 +237,19 @@ const DetailMenu = () => {
       {/* Kategorileri Listele */}
       {categories.map((category) => (
         <div key={category.id} className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">{category.name}</h2>
+          <h2
+            className="text-3xl font-bold text-gray-800 mb-6"
+            data-aos="fade-up" // AOS animation
+          >
+            {category.name}
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {category.products.map((product) => (
               <div
                 key={product.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl flex flex-col"
+                data-aos="fade-up" // AOS animation
+                data-aos-delay="200" // Delay for each product
               >
                 <img
                   src={product.image}
