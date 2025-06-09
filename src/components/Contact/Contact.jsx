@@ -35,16 +35,16 @@ const Contact = () => {
         <div 
           data-aos="fade-left" 
           className="w-full">
-          <iframe
-            title="Google Maps"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100167.13512417447!2d26.21447844483772!3d38.320667124960515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb79b752d35675%3A0x61287b379ef50511!2zw4dlxZ9tZSwgT3ZhY8Sxaywgw4dlxZ9tZS_EsHptaXI!5e0!3m2!1str!2str!4v1742539592245!5m2!1str!2str"
-            width="100%"
-            height="100%"
-            className="w-full h-full border-0"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+   <iframe
+  title="İzmir Kordon"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.716720316177!2d27.139169715620932!3d38.43839517960921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdf9be7879a1b%3A0xc9d12206acbfc6b0!2sİzmir%20Kordon!5e0!3m2!1str!2str!4v1717931425612!5m2!1str!2str"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
         </div>
 
         {/* İletişim Formu */}

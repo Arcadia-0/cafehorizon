@@ -31,7 +31,7 @@ const Footer = () => {
             <p className="text-lg font-semibold text-secondary mb-4">İletişim</p>
             <div className="flex items-center text-white mb-3">
               <FaMapMarkerAlt size={20} className="mr-3" />
-              <span>Çeşme, İzmir</span>
+              <span>Alsancak, İzmir</span>
             </div>
             <div className="flex items-center text-white mb-3">
               <FaPhoneAlt size={20} className="mr-3" />
@@ -66,8 +66,19 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="mt-12 border-t border-secondary pt-6 text-center">
-          <p className="text-sm text-white">© 2025 Seashell's Cafe. Tüm Hakları Saklıdır.</p>
-        </div>
+  <p className="text-sm text-white mb-2">© 2025 Seashell's Cafe. Tüm Hakları Saklıdır.</p>
+  <p className="text-sm text-white font-semibold">
+    Bu site{' '}
+    <a
+      href="https://www.arcadiadigital.com.tr/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-secondary font-bold">
+      ArcadiaDigital
+    </a>{' '}
+    tarafından geliştirilmiştir.
+  </p>
+</div>
 
       </div>
     </footer>
