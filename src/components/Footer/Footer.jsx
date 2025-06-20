@@ -70,11 +70,11 @@ const Footer = () => {
   <p className="text-sm text-white font-semibold">
     Bu site{' '}
     <a
-      href="https://www.arcadiadigital.com.tr/"
+      
       target="_blank"
       rel="noopener noreferrer"
       className="hover:text-secondary font-bold">
-      ArcadiaDigital
+      Yunus Deniz
     </a>{' '}
     tarafından geliştirilmiştir.
   </p>
